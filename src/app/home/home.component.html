@@ -1,0 +1,24 @@
+<h1>{{title.title}} {{name}}</h1>
+<p>{{name+ 1+9}}</p>
+<button (click)="onsubmit()">{{btn.submit}}</button>
+<button>{{btn.cancel}}</button>
+
+<div>
+    <label for="name">{{title.name}}[(ngModel)]</label>
+    <input type="text" [(ngModel)]="name" name="name">
+</div>
+
+<div>
+    <label for="name">{{title.name}}[ngModel]</label>
+    <input type="text" [ngModel]="name" name="name">
+</div>
+<div>
+
+    <label for="name">{{title.name}} (ngModel)</label>
+    <input type="text" (ngModel)="name" name="name">
+</div>
+
+<ul>
+    <li *ngFor="let item of list" (click)="delete(item)">{{item}}</li>
+
+</ul>
